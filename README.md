@@ -120,8 +120,8 @@ state every step. A few choices keep that smooth:
 
 ## Original prompt
 
-This project was built by Claude Fable 5 (`claude-fable-5`) in Claude
-Code, from this request, verbatim:
+This project was built by Claude Sonnet 5 (`claude-sonnet-5`) in
+Claude Code, from this request, verbatim:
 
 > In the GOLCube folder you will code up a app that runs Game of Life
 > on a 6 faced cube. There should be options to control the number of
