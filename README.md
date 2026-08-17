@@ -131,3 +131,6 @@ Claude Code, from this request, verbatim:
 > shapes (gliders, etc). I've had the best luck with this kind of
 > thing in Javascript, but if you think a different language would be
 > preferrably, consider that I am running a macbook.
+
+See also: [FAQ](FAQ.md) — including whether this code came from
+training data or an internet lookup.
