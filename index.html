@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game of Life on a Cube</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="layout">
+    <aside id="panel">
+      <h1>Game of Life<br><span>on a Cube</span></h1>
+
+      <section>
+        <h2>Grid</h2>
+        <label class="row">
+          <span>Cells per face edge</span>
+          <span id="nLabel" class="val">40</span>
+        </label>
+        <input type="range" id="nSlider" min="20" max="200" step="1" value="40">
+        <p class="hint">Rebuilds the board (N&times;N per face, &times;6 faces). Edges wrap seamlessly around the cube.</p>
+      </section>
+
+      <section>
+        <h2>Rotation</h2>
+        <label class="row"><span>X axis</span></label>
+        <input type="range" id="rotXSlider" min="0" max="360" step="1" value="0">
+        <label class="row"><span>Y axis</span></label>
+        <input type="range" id="rotYSlider" min="0" max="360" step="1" value="0">
+        <label class="check">
+          <input type="checkbox" id="autoRotateChk">
+          <span>Auto-rotate</span>
+        </label>
+        <p class="hint">Or just drag the cube with your mouse / finger.</p>
+      </section>
+
+      <section>
+        <h2>Simulation</h2>
+        <div class="btnrow">
+          <button id="stepBtn">Step</button>
+          <button id="runBtn" class="primary">Run</button>
+        </div>
+        <div class="btnrow">
+          <button id="clearBtn">Clear</button>
+          <button id="randomBtn">Randomize</button>
+        </div>
+        <label class="row">
+          <span>Speed</span>
+          <span id="speedLabel" class="val">6 gen/s</span>
+        </label>
+        <input type="range" id="speedSlider" min="1" max="30" step="1" value="6">
+        <div class="stats">
+          <div id="genLabel">Generation: 0</div>
+          <div id="popLabel">Alive: 0 / 0</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Draw</h2>
+        <select id="shapeSelect"></select>
+        <p class="hint">Click a cell to toggle it, or stamp the selected famous pattern centered on the click.</p>
+      </section>
+    </aside>
+
+    <main id="viewport">
+      <canvas id="scene"></canvas>
+    </main>
+  </div>
+
+  <script src="cube.js"></script>
+  <script src="shapes.js"></script>
+  <script src="https://unpkg.com/three@0.149.0/build/three.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
